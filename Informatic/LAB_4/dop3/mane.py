@@ -3,9 +3,9 @@
 from pathlib import Path
 
 import time
-from mane_task.mane import parse as parse_mane_task
-from dop1.mane import parse as parse_dop1
-from dop2.mane import parse as parse_dop2
+from Informatic.LAB_4.mane_task.mane import parse as parse_mane_task
+from Informatic.LAB_4.dop1.mane import parse as parse_dop1
+from Informatic.LAB_4.dop2.mane import parse as parse_dop2
 
 def check_time(function, src):
     start_time = time.time()
