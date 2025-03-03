@@ -77,9 +77,9 @@ def _is_float(value) -> bool:
 def _to_json(obj):
 
     headlines = list(obj[list(obj.keys())[0]].keys())
-    result = "number;" + ";".join(headlines)
+    result = "number," + ",".join(headlines)
     for i in obj.keys():
-        result += "\n" + i + ';"' + '";"'.join([str(obj[i][j]) for j in headlines])+ '"'
+        result += "\n" + i + ',"' + '","'.join([str(obj[i][j]) for j in headlines])+ '"'
     return result
 
 
