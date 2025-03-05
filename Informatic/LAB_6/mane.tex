@@ -1,0 +1,38 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{amsmath, amssymb, amsfonts}
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+\usepackage{array, booktabs}
+\usepackage{ragged2e}
+\usepackage{wrapfig}
+\usepackage{multicol}
+\setlength{\columnsep}{1cm}
+
+% Настройка отступов страницы
+\geometry{left=1cm, right=1cm, top=4cm, bottom=2cm}
+
+% Настройка колонтитулов
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{\textbf{ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ АВТОНОМНОЕ\\
+ОБРАЗОВАТЕЛЬНОЕ УЧРЕЖДЕНИЕ ВЫСШЕГО ОБРАЗОВАНИЯ\\[0.5cm]
+«Национальный исследовательский университет ИТМО»
+}}
+\fancyfoot[C]{\textbf{Санкт-Петербург 2025}}
+\renewcommand{\headrulewidth}{0pt}
+
+
+\begin{document}
+
+% Устанавливаем стиль с колонтитулом для титульного листа
+\input{titlelist}
+
+% Завершаем страницу и переключаемся на стиль без колонтитулов
+\clearpage
+\input{task1}
+
+\end{document}
