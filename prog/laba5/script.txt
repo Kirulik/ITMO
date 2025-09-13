@@ -1,0 +1,15 @@
+﻿add
+nama
+12
+32
+33
+ACTION
+G
+nama
+222
+RED
+600
+0
+-1
+nama
+show

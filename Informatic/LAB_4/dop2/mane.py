@@ -1,6 +1,9 @@
 from pathlib import Path
 import re
 
+
+keypars = re.compile(r"^([ ]*)(\w*):[ ]*(.*)$")
+
 def parse(fileline):
     data = _parse_lines(fileline.strip().split("\n"))
     json_schedule = _to_json(data, 0)
@@ -38,7 +41,7 @@ def _parse_lines(lines):
 
 def _parse_key_value(line):
     """Разбирает строку YAML на отступ, ключ и значение."""
-    match = re.match(r"^([ ]*)(\w*):[ ]*(.*)$", line)
+    match = keypars.match(line)
     if match:
         return len(match.group(1)), _convert_value(match.group(2)), _convert_value(match.group(3))
     return 0, None, None
